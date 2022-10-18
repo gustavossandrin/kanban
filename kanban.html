@@ -1,0 +1,223 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/kanban.css">
+        <title>Kanban</title>
+    </head>
+    <body>
+        <div>
+            <table style="border: 2px solid;" >
+                <thead style="border: 2px solid;">
+                    <tr>
+                        <th style="width: 14%;">
+                            <h2>Segunda</h2>
+                        </th>
+                        <th style="width: 14%;">
+                            <h2>Terça</h2>
+                        </th>
+                        <th style="width: 14%;">
+                            <h2>Quarta</h2>
+                        </th>
+                        <th style="width: 14%;">
+                            <h2>Quinta</h2>
+                        </th>
+                        <th style="width: 14%;">
+                            <h2>Sexta</h2>
+                        </th>
+                        <th style="width: 14%;">
+                            <h2>Bloqueio</h2>
+                        </th>
+                        <th style="width: 14%;">
+                            <h2>Concluído</h2>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_1 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+
+                         <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_2 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+                         <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_3 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+
+                         <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_4 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+                         <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_5 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+                         <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_6 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+                         <td style="border: 2px solid;">
+                            <br>
+                            {% for tarefa in tarefas_list_col_7 %}
+                                <div style="display: inline-block; display: flex; flex-direction: column; min-height: 180px; width: 180px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a;">
+                                    <div style="position: absolute; margin-top: 2px !important; margin-left: 5px; display: flex; flex-direction: column;">
+                                        <div>
+                                            <h5>{{ tarefa.titulo }}</h5>
+                                            <i class="fa fa-clock-o">{{ tarefa.tempo_previsto }}</i>
+                                            <br>
+                                            <span>...........................................</span>
+                                            <br>
+                                            {% for obs in tarefa.label %}
+                                               <div style="display: inline-block; height: 20px; _margin: 2px;  border: 2px solid #d7e04a; border-radius: 5px; _background-color: #d7e04a; display: flex; flex-direction: row; max-height: 20px;">
+                                                   <div style="position: absolute; margin-top: 2px !important; margin-left: 5px;">
+                                                        <span>{{ obs }}</span>
+                                                   </div>
+                                               </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            {% endfor %}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
